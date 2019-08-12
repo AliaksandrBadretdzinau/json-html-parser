@@ -1,11 +1,11 @@
-from json import load, dumps
+import asyncio
 from os import walk
 from os.path import join
-from pybars import Compiler
 from pathlib import Path
-from functools import lru_cache
+from pybars import Compiler
+from json import load, dumps
 from pyppeteer import launch
-import asyncio
+from functools import lru_cache
 
 
 HTML_CONF = {
