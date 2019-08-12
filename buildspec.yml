@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - yum -y groupinstall development
+      - yum -y install zlib-devel
+      - wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tar.xz
+      - tar xJf Python-3.7.4.tar.xz
+      - cd Python-3.7.4
+      - ./configure
+      - make
+      - make install
+      - wget https://bootstrap.pypa.io/get-pip.py
+      - python3 get-pip.py
+      - pip install --upgrade pip
+      - pip install pybars3
+      - pip install pyppeteer
+  build:
+    commands:
+      - python json-pdf-app
+
