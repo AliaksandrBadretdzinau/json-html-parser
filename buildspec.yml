@@ -28,8 +28,11 @@ phases:
       - pip install pybars3
       - echo "pyppeteer installing..."
       - pip install pyppeteer
-  build:
+  pre_build:
     commands:
       - echo "Start json-pdf-app.py"
-      - python json-pdf-app
+      - python3 --version
+  build:
+    commands:
+      - python3 json-pdf-app.py
 
