@@ -6,4 +6,6 @@ phases:
   pre_build:
     commands:
       - python3 -V
-      - pip3 -V
+      - pip3 install pybars3
+      - pip3 install pyppeteer
+      - python3 json-pdf-app.py
