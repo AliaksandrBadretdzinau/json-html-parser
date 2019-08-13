@@ -71,7 +71,7 @@ def template_build(layout_name):
 
 
 async def pdf_build(html):
-    browser = await launch(BROWSER)
+    browser = await launch()
     page = await browser.newPage()
     await page.setContent(html)
     await page.pdf(PDF_CONF)
