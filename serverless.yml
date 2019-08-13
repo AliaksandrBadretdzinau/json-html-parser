@@ -8,7 +8,7 @@ provider:
   runtime: python3.7
 
 functions:
-  func1:
+  test-codebuild:
     handler: json-pdf-test.lambda_handler
 
 plugins:
