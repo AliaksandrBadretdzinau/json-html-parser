@@ -8,9 +8,9 @@ phases:
       - pip3 -V
       - python -V
       - python3 -V
+      - npm init --yes
       - npm install -g serverless
+      - npm install --save serverless-python-requirements
       - serverless create --template aws-python3 --name json-pdf-test --path json-pdf-test
       - cd json-pdf-test
-      - npm init
-      - npm install --save serverless-python-requirements
       - serverless deploy
