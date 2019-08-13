@@ -21,6 +21,7 @@ PDF_CONF = {
 }
 
 BROWSER = {
+    'args': ['--no-sandbox'],
     'executablePath': '/root/.local/share/pyppeteer/local-chromium/575458'
 }
 
