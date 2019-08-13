@@ -1,0 +1,8 @@
+appdirs==1.4.3
+pybars3==0.9.6
+pyee==6.0.0
+PyMeta3==0.5.1
+pyppeteer==0.0.25
+tqdm==4.33.0
+urllib3==1.25.3
+websockets==8.0.2

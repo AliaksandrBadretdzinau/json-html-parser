@@ -1,0 +1,19 @@
+# serverless.yml
+
+
+service: numpy-test
+
+provider:
+  name: aws
+  runtime: python3.7
+
+functions:
+  func1:
+    handler: json-pdf-test.lambda_handler
+
+plugins:
+ - serverless-python-requirements
+
+custom:
+ pythonRequirements:
+  dockerizePip: false   

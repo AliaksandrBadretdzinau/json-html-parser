@@ -15,7 +15,7 @@ HTML_CONF = {
 }
 
 PDF_CONF = {
-    "path": "result.pdf",
+    "path": "/tmp/result.pdf",
     "printBackground": True,
     "format": "A4"
 }
@@ -78,11 +78,7 @@ async def pdf_build(html):
     await browser.close()
 
 
-if __name__ == '__main__':
-    with open('data.json') as f:
-        data = load(f)
-
-    template = template_build(data['data']['layout_name'])
+def lambda_handler(event, context):
+    template = template_build(event['data']['layout_name'])
     html = template(data['data'])
-
     asyncio.run(pdf_build(html))
