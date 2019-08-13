@@ -21,7 +21,7 @@ PDF_CONF = {
 }
 
 BROWSER = {
-    'executablePath': 'chrome-linux/chrome'
+    'executablePath': '/root/.local/share/pyppeteer/local-chromium/575458'
 }
 
 
@@ -71,7 +71,7 @@ def template_build(layout_name):
 
 
 async def pdf_build(html):
-    browser = await launch()
+    browser = await launch(BROWSER)
     page = await browser.newPage()
     await page.setContent(html)
     await page.pdf(PDF_CONF)
