@@ -11,6 +11,9 @@ functions:
   test-codebuild:
     handler: json-pdf-test.lambda_handler
 
+endpoints:
+  https://klr9u11vt3.execute-api.us-east-2.amazonaws.com/default/test-codebuild
+
 plugins:
  - serverless-python-requirements
 
