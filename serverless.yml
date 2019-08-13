@@ -1,20 +1,18 @@
 # serverless.yml
 
 
-service:
- name: json-pdf-test
+service: json-pdf
 
 provider:
  name: aws
  runtime: python3.7
- region: us-east-2 
+ region: us-east-1 
 
 functions:
-  test-codebuild:
-    handler: json-pdf-test.lambda_handler
-
-endpoints:
-  https://klr9u11vt3.execute-api.us-east-2.amazonaws.com/default/test-codebuild
+ pdf-gen:
+  handler: json-pdf.gen
+  events:
+   - http: post json-pdf/create
 
 plugins:
  - serverless-python-requirements
