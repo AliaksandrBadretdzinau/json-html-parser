@@ -7,7 +7,7 @@ service:
 provider:
  name: aws
  runtime: python3.7
- region: ${opt:region, 'us-east-2'} 
+ region: us-east-2 
 
 functions:
   test-codebuild:
