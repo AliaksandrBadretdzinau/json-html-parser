@@ -6,3 +6,4 @@ phases:
   pre_build:
     commands:
       - python3 -V
+      - pip3 -V
