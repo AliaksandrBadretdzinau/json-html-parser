@@ -1,11 +1,13 @@
 # serverless.yml
 
 
-service: numpy-test
+service:
+ name: json-pdf-test
 
 provider:
-  name: aws
-  runtime: python3.7
+ name: aws
+ runtime: python3.7
+ region: ${opt:region, 'us-east-2'} 
 
 functions:
   test-codebuild:
