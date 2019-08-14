@@ -5,6 +5,8 @@ phases:
     commands:
       - cp -r .aws/ ~/
       - pip install --upgrade pip
+      - pip install -r requirements.txt
+      - python json-pdf-app.py
       - npm init --yes
       - npm install -g serverless
       - npm install --save serverless-python-requirements
