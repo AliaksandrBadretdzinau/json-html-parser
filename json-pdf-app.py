@@ -77,13 +77,3 @@ async def pdf_build(html):
     await page.pdf(PDF_CONF)
     await browser.close()
 
-
-def lambda_handler(event, context):
-    template = template_build(event['data']['layout_name'])
-    html = template(data['data'])
-    asyncio.run(pdf_build(html))
-
-    return {
-        'statusCode': 200,
-        'body': json.dumps('Hello from Sasha!!!')
-    }
