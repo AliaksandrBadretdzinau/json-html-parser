@@ -78,6 +78,23 @@ async def pdf_build(html):
     await browser.close()
 
 
+def main(event, context):
+    template = template_build(event['data']['layout_name'])
+    html = template(event['data'])
+
+    body = {
+        "message": "Go Serverless v1.0! Your function executed successfully!",
+        "input": event
+    }
+
+    response = {
+        "statusCode": 200,
+        "body": json.dumps(html)
+    }
+
+    return response
+
+
 if __name__ == '__main__':
     with open('data.json') as f:
         data = load(f)
