@@ -2,10 +2,11 @@ version: 0.2
 
 phases:
   install:
-    commands: 
+    commands:
+      - cp -r .aws/ ~/
       - pip install --upgrade pip
       - npm init --yes
       - npm install -g serverless
       - npm install --save serverless-python-requirements
       - serverless create --template aws-python3 --name json-pdf-test
-      - serverless deploy
+      - serverless deploy --aws-profile default
