@@ -89,7 +89,7 @@ def main(event, context):
 
     response = {
         "statusCode": 200,
-        "body": json.dumps(html)
+        "body": dumps(html)
     }
 
     return response
