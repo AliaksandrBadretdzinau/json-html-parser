@@ -11,4 +11,4 @@ phases:
       - serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
       - npm install --save serverless-python-requirements
       - ls /
-      - serverless deploy --aws-profile default
+      - serverless remove && serverless deploy --aws-profile default
