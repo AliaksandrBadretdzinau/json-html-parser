@@ -77,3 +77,12 @@ async def pdf_build(html):
     await page.pdf(PDF_CONF)
     await browser.close()
 
+
+if __name__ == '__main__':
+    with open('data.json') as f:
+        data = load(f)
+
+    template = template_build(data['data']['layout_name'])
+    html = template(data['data'])
+    asyncio.run(pdf_build(html))
+
