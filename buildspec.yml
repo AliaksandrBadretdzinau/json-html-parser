@@ -9,4 +9,4 @@ phases:
       - npm install -g serverless
       - serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
       - ls /
-      - serverless remove && serverless deploy --aws-profile default
+      - serverless remove && serverless deploy -v --aws-profile default
