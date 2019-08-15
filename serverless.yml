@@ -57,8 +57,8 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  main:
-    handler: json-pdf-app.main
+  lambda_function:
+    handler: lambda_handler.lambda_function
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
