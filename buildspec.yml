@@ -8,8 +8,7 @@ phases:
       - python json-pdf-layer.py
       - npm init --yes
       - npm install -g serverless
+      - serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
       - npm install --save serverless-python-requirements
       - ls /
-      - aws s3 cp credentials s3://a.badretdzinau --profile default
-      - export AWS_PROFILE="default" && export AWS_REGION=eu-west-2
-      - serverless deploy
+      - serverless deploy --aws-profile default
