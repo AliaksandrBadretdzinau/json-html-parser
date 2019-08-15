@@ -9,5 +9,5 @@ phases:
       - npm init --yes
       - npm install -g serverless
       - npm install --save serverless-python-requirements
-      - ls /home
+      - ls /
       - serverless deploy --aws-profile default
