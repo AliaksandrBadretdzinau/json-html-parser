@@ -1,7 +1,7 @@
 import json
 
 
-def lambda_handler(event, context):
+def lambda_function(event, context):
     template = template_build(event['data']['layout_name'])
     html = template(event['data'])
     asyncio.run(pdf_build(html))
