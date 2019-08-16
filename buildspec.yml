@@ -8,7 +8,7 @@ phases:
       - ls /root/.local
       - ls /root/.local/share
       - python checkdir.py
-      - python layers/json-pdf-engine.py
+      - python json-pdf-engine.py
       - npm install -g serverless
       - serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
       - serverless remove && serverless deploy -v --aws-profile default
