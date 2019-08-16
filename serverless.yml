@@ -58,7 +58,7 @@ provider:
 
 layers:
   JsonPdfEngine:
-    path: layers
+    path: layers/
 
 
 functions:
