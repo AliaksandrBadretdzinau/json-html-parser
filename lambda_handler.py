@@ -1,9 +1,9 @@
-import JsonPdfEngine as jpe
+import JsonPdfEngineLayer as json_pdf_engine
 from json import dumps
 
 
 def lambda_function(event, context):
-    template = jpe.template_build(event['data']['layout_name'])
+    template = json_pdf_engine.template_build(event['data']['layout_name'])
     html = template(event['data'])
     #asyncio.run(pdf_build(html))
 
