@@ -5,7 +5,7 @@ phases:
     commands:
       - pip install --upgrade pip
       - pip install -r requirements.txt
-      - python json-pdf-parser.py
+      - python json_pdf_engine.py
       - npm install -g serverless
       - serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
       - serverless deploy --aws-profile default
