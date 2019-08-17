@@ -57,7 +57,7 @@ provider:
 #    - exclude-me-dir/**
 
 layers:
-  json_pdf_converter:
+  JsonPdfConverter:
     path: layers/JsonPdfEnginePath
 
 
@@ -65,7 +65,7 @@ functions:
   lambda_handler:
     handler: lambda_handler.lambda_function
     layers:
-      - {Ref: Json_pdf_converterLambdaLayer}
+      - {Ref: JsonPdfConverterLambdaLayer}
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
