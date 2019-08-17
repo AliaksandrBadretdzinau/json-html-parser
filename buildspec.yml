@@ -6,7 +6,7 @@ phases:
       - pip install --upgrade pip
       - pip install -r requirements.txt
       - python get_dirs.py
-      - export LAYER_SOURCE_PATH=/layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
+      - export LAYER_SOURCE_PATH=layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
       - ls $LAYER_SOURCE_PATH
       - ls
       - ls /usr/local/lib/python3.7/site-packages
