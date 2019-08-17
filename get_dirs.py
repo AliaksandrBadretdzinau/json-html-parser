@@ -11,7 +11,7 @@ libs = (
     'pymeta',
     'pyppeteer',
     'tqdm',
-    'urlib3',
+    'urllib3',
     'websockets'
 )
 
