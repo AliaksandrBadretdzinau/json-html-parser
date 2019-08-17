@@ -1,4 +1,7 @@
-import sys
+import shutil as sh
 
 
-print(sys.path)
+packages = '/usr/local/lib/python3.7/site-packages/'
+sourses = '/layers/JsonPdfEnginePath/python/lib/python3.7/site-packages/'
+
+sh.copy(f'{packages}appdir.py', sourses)
