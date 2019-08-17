@@ -5,7 +5,7 @@ phases:
     commands:
       - pip install --upgrade pip
       - pip install -r requirements.txt
-      - python get_dirs.py
+      - ls /codebuild/output/src679281968/src/github.com/AliaksandrBadretdzinau/json-html-parser
       - ls /usr/local/lib/python3.7/site-packages
       - npm install -g serverless
       - serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
