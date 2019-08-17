@@ -5,17 +5,17 @@ phases:
     commands:
       - pip install --upgrade pip
       - pip install -r requirements.txt
-      - export lib_path = /usr/local/lib/python3.7/site-packages
-      - export layer_source_path = /layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
-      - cp $lib_path/app_dirs.py $layer_source_path/
-      - cp -r $lib_path/pybars $layer_source_path/
-      - cp -r $lib_path/pyee $layer_source_path/
-      - cp -r $lib_path/pymeta $layer_source_path/
-      - cp -r $lib_path/pyppeteer $layer_source_path/
-      - cp -r $lib_path/tqdm $layer_source_path/
-      - cp -r $lib_path/urlib3 $layer_source_path/
-      - cp -r $lib_path/websockets $layer_source_path/
-      - ls $layer_source_path
+      - export LIB_PATH=/usr/local/lib/python3.7/site-packages
+      - export LAYER_SOURCE_PATH=/layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
+      - cp $LIB_PATH/app_dirs.py $LAYER_SOURCE_PATH/
+      - cp -r $LIB_PATH/pybars $LAYER_SOURCE_PATH/
+      - cp -r $LIB_PATH/pyee $LAYER_SOURCE_PATH/
+      - cp -r $LIB_PATH/pymeta $LAYER_SOURCE_PATH/
+      - cp -r $LIB_PATH/pyppeteer $LAYER_SOURCE_PATH/
+      - cp -r $LIB_PATH/tqdm $LAYER_SOURCE_PATH/
+      - cp -r $LIB_PATH/urlib3 $LAYER_SOURCE_PATH/
+      - cp -r $LIB_PATH/websockets $LAYER_SOURCE_PATH/
+      - ls $LAYER_SOURCE_PATH
       - python get_dirs.py
       - ls
       - ls /usr/local/lib/python3.7/site-packages
