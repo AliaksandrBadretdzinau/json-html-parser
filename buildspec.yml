@@ -6,7 +6,6 @@ phases:
       - pip install --upgrade pip
       - pip install -r requirements.txt
       - python libs_builder.py
-      - ls $LAYER_SOURCE_PATH
       - ls /usr/local/lib/python3.7/site-packages
       - npm install -g serverless
       - serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
