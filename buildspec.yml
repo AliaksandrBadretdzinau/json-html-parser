@@ -5,6 +5,7 @@ phases:
     commands:
       - pip install --upgrade pip
       - pip install -r requirements.txt
+      - python get_dirs.py
       - npm install -g serverless
       - serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
       - serverless deploy --aws-profile default
