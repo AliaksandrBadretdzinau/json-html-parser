@@ -18,6 +18,6 @@ libs = (
 for lib in libs:
     obj = path.join(src, lib)
     if path.isdir(obj):
-        sh.copytree(obj, dest)
+        sh.copytree(obj, join.path(dest, lib))
     else:
         sh.copy(obj, dest)
