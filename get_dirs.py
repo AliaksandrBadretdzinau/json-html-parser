@@ -2,7 +2,19 @@ import shutil as sh
 from os import path
 
 
-packages = '/usr/local/lib/python3.7/site-packages'
-sourses = 'layers/JsonPdfEnginePath/python/lib/python3.7/site-packages'
+src = '/usr/local/lib/python3.7/site-packages'
+dest = 'layers/JsonPdfEnginePath/python/lib/python3.7/site-packages'
+libs = (
+    'appdirs.py',
+    'pybars',
+    'pyee',
+    'pymeta',
+    'pyppeteer',
+    'tqdm',
+    'urlib3',
+    'websockets'
+)
 
-sh.copy(path.join(packages, 'appdirs.py'), sourses)
+for lib in libs:
+    sh.copy(path.join(src, lib), dest)
+
