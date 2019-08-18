@@ -5,7 +5,6 @@ phases:
     commands:
       - pip install --upgrade pip
       - pip install -r requirements.txt
-      - git clone https://github.com/ollyajoke/headless-chromium.git
       - python libs_builder.py
       - ls layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
       - npm install -g serverless
