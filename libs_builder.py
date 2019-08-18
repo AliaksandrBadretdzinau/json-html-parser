@@ -11,7 +11,6 @@ libs = (
     'pybars',
     'pyee',
     'pymeta',
-    'pyppeteer',
     'tqdm',
     'urllib3',
     'websockets',
