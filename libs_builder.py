@@ -16,7 +16,7 @@ libs = (
     'urllib3',
     'websockets'
 )
-file = os.path.join(dest, 'JsonPdfEngineLayer.py')
+#file = os.path.join(dest, 'JsonPdfEngineLayer.py')
 #st = os.stat(file)
 #os.chmod(file, st.st_mode | stat.S_IEXEC)
 
@@ -27,5 +27,5 @@ for lib in libs:
     else:
         sh.copy(obj, dest)
 
-my_dir = os.path.dirname(dest)
-os.system('%s %s' % ('python ', file))
+#my_dir = os.path.dirname(dest)
+#os.system('%s %s' % ('python ', file))
