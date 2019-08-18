@@ -15,7 +15,8 @@ libs = (
     'tqdm',
     'urllib3',
     'websockets',
-    'weasyprint'
+    'weasyprint',
+    'cssselect2'
 )
 
 for lib in libs:
