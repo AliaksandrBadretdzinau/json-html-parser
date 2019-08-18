@@ -3,6 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
+      - gcc
       - apt-get install python3-dev --yes
       - apt-get install libffi-dev --yes
       - pip install --upgrade pip
