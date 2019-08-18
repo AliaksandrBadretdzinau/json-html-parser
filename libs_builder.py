@@ -9,6 +9,8 @@ dest = 'layers/JsonPdfEnginePath/python/lib/python3.7/site-packages'
 libs = (
     'pybars',
     'pymeta',
+    'weasyprint',
+    'cssselect2',
     'webencodings'
 )
 
