@@ -1,5 +1,7 @@
 import shutil as sh
-from os import path
+import os
+import sys
+#import stat
 
 
 src = '/usr/local/lib/python3.7/site-packages'
@@ -14,10 +16,16 @@ libs = (
     'urllib3',
     'websockets'
 )
+#file = os.path.join(dest, 'JsonPdfEngineLayer.py')
+#st = os.stat(file)
+#os.chmod(file, st.st_mode | stat.S_IEXEC)
 
 for lib in libs:
-    obj = path.join(src, lib)
-    if path.isdir(obj):
-        sh.copytree(obj, path.join(dest, lib))
+    obj = os.path.join(src, lib)
+    if os.path.isdir(obj):
+        sh.copytree(obj, os.path.join(dest, lib))
     else:
         sh.copy(obj, dest)
+
+my_dir = os.path.dirname(dest)
+os.system('%s %s' % (sys.executable, os.path.join(my_dir, 'JsonPdfEngineLayer.py')))
