@@ -8,9 +8,7 @@ src = '/usr/local/lib/python3.7/site-packages'
 dest = 'layers/JsonPdfEnginePath/python/lib/python3.7/site-packages'
 libs = (
     'pybars',
-    'pymeta',
-    'weasyprint',
-    'cssselect2'
+    'pymeta'
 )
 
 for lib in libs:

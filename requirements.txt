@@ -1,4 +1,2 @@
 pybars3==0.9.6
 PyMeta3==0.5.1
-WeasyPrint==48
-cssselect2==0.2.1
