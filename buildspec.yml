@@ -5,6 +5,7 @@ phases:
     commands:
       - pip install --upgrade pip
       - pip install -r requirements.txt
+      - git
       - python browser_get.py
       - cp -r /root/.local/share/pyppeteer/local-chromium/575458/chrome-linux layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
       - python libs_builder.py
