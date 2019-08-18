@@ -1,3 +1,4 @@
+import asyncio
 from pyppeteer import launch
 
 PDF_CONF = {
@@ -10,8 +11,14 @@ BROWSER = {
     'args': ['--no-sandbox']
 }
 
-browser = await launch(BROWSER)
-page = await browser.newPage()
-await page.setContent(html)
-await page.pdf(PDF_CONF)
-await browser.close()
+async def pdf_build(html):
+    browser = await launch(BROWSER)
+    page = await browser.newPage()
+    await page.setContent(html)
+    await page.pdf(PDF_CONF)
+    await browser.close()
+
+
+if __name__ == "__main__":
+    html = '<h1>Test</h1>'
+    asyncio.run(pdf_build(html))
