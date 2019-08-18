@@ -6,3 +6,4 @@ webencodings==0.5.1
 tinycss2==1.0.2
 html5lib==1.0.1
 cairocffi==1.0.2
+cffi==1.12.3

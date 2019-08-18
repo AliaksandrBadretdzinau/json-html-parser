@@ -14,7 +14,8 @@ libs = (
     'webencodings',
     'tinycss2',
     'html5lib',
-    'cairocffi'
+    'cairocffi',
+    'cffi'
 )
 
 for lib in libs:
