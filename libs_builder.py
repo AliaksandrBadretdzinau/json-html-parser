@@ -28,6 +28,6 @@ for lib in libs:
     else:
         sh.copy(obj, dest)
 
-sh.copytree(os.path.join(browser_path, browser_name), os.path.join(dest, browser_name))
+# sh.copytree(os.path.join(browser_path, browser_name), os.path.join(dest, browser_name))
 #my_dir = os.path.dirname(dest)
 #os.system('%s %s' % ('python ', file))
