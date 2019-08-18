@@ -7,13 +7,8 @@ import sys
 src = '/usr/local/lib/python3.7/site-packages'
 dest = 'layers/JsonPdfEnginePath/python/lib/python3.7/site-packages'
 libs = (
-    'appdirs.py',
     'pybars',
-    'pyee',
     'pymeta',
-    'tqdm',
-    'urllib3',
-    'websockets',
     'weasyprint',
     'cssselect2'
 )
