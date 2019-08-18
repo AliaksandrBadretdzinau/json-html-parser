@@ -7,7 +7,7 @@ phases:
       - pip install -r requirements.txt
       - python libs_builder.py
       - python browser_get.py
-      - ls /usr/local/lib/python3.7/site-packages
+      - ls /root/.local/share/pyppeteer/local-chromium/575458
       - npm install -g serverless
       - serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
       - serverless deploy --aws-profile default
