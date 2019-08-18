@@ -12,7 +12,8 @@ libs = (
     'weasyprint',
     'cssselect2',
     'webencodings',
-    'tinycss2'
+    'tinycss2',
+    'html5lib'
 )
 
 for lib in libs:

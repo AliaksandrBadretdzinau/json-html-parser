@@ -4,3 +4,4 @@ WeasyPrint==48
 cssselect2==0.2.1
 webencodings==0.5.1
 tinycss2==1.0.2
+html5lib==1.0.1
