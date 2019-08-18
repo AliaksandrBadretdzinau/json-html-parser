@@ -29,6 +29,7 @@ for lib in libs:
         sh.copy(obj, dest)
 
 sh.copy('headless-chromium/headless-chromium', dest)
+sh.rmtree('headless-chromium')
 # sh.copytree(os.path.join(browser_path, browser_name), os.path.join(dest, browser_name))
 #my_dir = os.path.dirname(dest)
 #os.system('%s %s' % ('python ', file))
