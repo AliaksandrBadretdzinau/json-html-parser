@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - apt install yum --yes
-      - yum
+      - yum install gcc libffi-devel python-devel openssl-devel
       - pip install --upgrade pip
       - pip install -r requirements.txt
       - python libs_builder.py
