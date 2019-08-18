@@ -11,7 +11,8 @@ libs = (
     'pymeta',
     'weasyprint',
     'cssselect2',
-    'webencodings'
+    'webencodings',
+    'tinycss2'
 )
 
 for lib in libs:
