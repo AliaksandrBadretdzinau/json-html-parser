@@ -3,8 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - apt install yum --yes
-      - yum install gcc libffi-devel python-devel openssl-devel
+      - apt install gcc libffi-devel python-devel openssl-devel --yes
       - pip install --upgrade pip
       - pip install -r requirements.txt
       - python libs_builder.py
