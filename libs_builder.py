@@ -15,7 +15,7 @@ libs = (
     'tinycss2',
     'html5lib',
     'cairocffi',
-    'cffi'
+    '_cffi_backend.cpython-37m-x86_64-linux-gnu.so'
 )
 
 for lib in libs:
