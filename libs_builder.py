@@ -47,3 +47,8 @@ def pango():
     )
 
     copy_libs(src, dest, libs)
+
+
+if __name__ == '__main__':
+    libs_standart()
+    pang()
