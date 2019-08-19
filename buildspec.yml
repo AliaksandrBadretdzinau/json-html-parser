@@ -7,6 +7,7 @@ phases:
       - pip install --upgrade pip
       - pip install -r requirements.txt
       - ls -a /usr/local/lib/python3.7/site-packages
+      - ls -a /usr/lib
       - python libs_builder.py
       - ls -a layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
       - npm install -g serverless
