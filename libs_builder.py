@@ -18,7 +18,8 @@ libs = (
     'cffi',
     '_cffi_backend.cpython-37m-x86_64-linux-gnu.so',
     '.libs_cffi_backend',
-    'pyphen'
+    'pyphen',
+    'pycparser'
 )
 
 for lib in libs:
