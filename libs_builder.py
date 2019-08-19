@@ -3,7 +3,7 @@ import os
 import sys
 
 
-def copy_libs(src, dest, libs)
+def copy_libs(src, dest, libs):
     for lib in libs:
         obj = os.path.join(src, lib)
         if os.path.isdir(obj):
