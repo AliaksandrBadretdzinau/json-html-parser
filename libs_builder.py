@@ -47,6 +47,7 @@ def pango():
         'libpangoft2-1.0.so.0.4000.14'
     )
 
+    print(dest)
     p1 = sh.copy('/usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4000.14', os.path.join(dest, 'pango-1.0'))
     p2 = sh.copy('/usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4000.14', os.path.join(dest, 'pangocairo-1.0'))
     p3 = sh.copy('/usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14', dest)
