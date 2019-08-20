@@ -11,6 +11,7 @@ phases:
       - cp /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4000.14 pangocairo-1.0
       - cp /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14 .
       - cp /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14 libthai.so.0
+      - cp /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14 libharfbuzz.so.0
       - ls
       - ls -a layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
       - npm install -g serverless
