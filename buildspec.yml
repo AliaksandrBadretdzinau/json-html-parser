@@ -5,7 +5,7 @@ phases:
     commands:
       - pip install --upgrade pip
       - pip install -r requirements.txt
-      - echo $CODEBUILD_SRC_DIR | python libs_builder.py
+      - python libs_builder.py ${pwd}
       - ls
       - ls -a layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
       - npm install -g serverless
