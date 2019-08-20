@@ -36,7 +36,7 @@ def libs_standart():
 
 def pango():
     src = '/usr/lib/x86_64-linux-gnu'
-    dest = 'layers/JsonPdfEnginePath/python/lib/python3.7/site-packages'
+    dest = '/codebuild/output/src214778725/src/github.com/AliaksandrBadretdzinau/json-html-parser'
 
     libs = (
         'libpango-1.0.so.0',
@@ -47,9 +47,9 @@ def pango():
         'libpangoft2-1.0.so.0.4000.14'
     )
 
-    sh.copy('/usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4000.14', 'pango-1.0')
-    sh.copy('/usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4000.14', 'pangocairo-1.0')
-    sh.copy('/usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14', '')
+    sh.copy('/usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4000.14', os.path.join(dest, 'pango-1.0'))
+    sh.copy('/usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4000.14', os.path.join(dest, 'pangocairo-1.0'))
+    sh.copy('/usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14', dest)
     #copy_libs(src, dest, libs)
 
 
