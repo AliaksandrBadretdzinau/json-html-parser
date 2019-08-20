@@ -47,8 +47,8 @@ def pango():
         'libpangoft2-1.0.so.0.4000.14'
     )
 
-    sh.copy('/usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4000.14', '.pango-1.0'))
-    sh.copy('/usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4000.14', '.pangocairo-1.0'))
+    sh.copy('/usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4000.14', '.pango-1.0')
+    sh.copy('/usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4000.14', '.pangocairo-1.0')
     sh.copy('/usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14', '.')
     #copy_libs(src, dest, libs)
 
