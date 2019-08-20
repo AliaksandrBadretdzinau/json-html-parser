@@ -56,4 +56,4 @@ def pango():
 
 if __name__ == '__main__':
     libs_standart()
-    pango()
+    #pango()
