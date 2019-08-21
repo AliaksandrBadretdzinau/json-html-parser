@@ -24,6 +24,7 @@ phases:
       - cp /usr/lib64/libpango-1.0.so.0 pango-1.0
       - cp /usr/lib64/libpangocairo-1.0.so.0 .
       - cp /usr/lib64/libpangoft2-1.0.so.0 .
+      - cp /usr/lib64/libthai.so.0 .
       #- cp /usr/lib/i386-linux-gnu/libthai.so.0 .
       - pip install --upgrade pip
       - pip install -r requirements.txt
