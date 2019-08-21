@@ -35,7 +35,7 @@ def libs_standart():
 
 
 def pango():
-    src = '/usr/lib/x86_64-linux-gnu'
+    src = '/usr/lib64'
     dest = sys.argv[0]
 
     libs = (
