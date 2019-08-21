@@ -17,6 +17,7 @@ phases:
        python: 3.7
       # name: version
     commands:
+      - rpm -ql pango
       - pip install --upgrade pip
       - pip install -r requirements.txt
       - python libs_builder.py
