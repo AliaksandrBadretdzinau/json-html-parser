@@ -17,7 +17,7 @@ phases:
        python: 3.7
       # name: version
     commands:
-      - yum install --yes redhat-rpm-config python-devel python-setuptools python-wheel python-cffi libffi-devel cairo pango gdk-pixbuf2
+      - yum install -y redhat-rpm-config python-devel python-setuptools python-wheel python-cffi libffi-devel cairo pango gdk-pixbuf2
       - rpm -ql pango
       #- cp /usr/lib64/girepository-1.0/Pango-1.0.typelib .
       - cp /usr/lib64/libpango-1.0.so.0 .
