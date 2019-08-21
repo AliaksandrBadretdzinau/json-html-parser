@@ -17,12 +17,12 @@ phases:
        python: 3.7
       # name: version
     commands:
-      #- pip install --upgrade pip
-      #- pip install -r requirements.txt
-      #- ls -a layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
-      #- npm install -g serverless
-      #- serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
-      #- serverless deploy --aws-profile default
+      - pip install --upgrade pip
+      - pip install -r requirements.txt
+      - ls -a layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
+      - npm install -g serverless
+      - serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
+      - serverless deploy --aws-profile default
   #pre_build:
     #commands:
       # - command
