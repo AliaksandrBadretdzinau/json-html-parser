@@ -17,18 +17,8 @@ phases:
        python: 3.7
       # name: version
     commands:
-      - apt-get install --yes build-essential python3-dev python3-pip python3-setuptools python3-wheel python3-cffi libcairo2 libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info
       - pip install --upgrade pip
       - pip install -r requirements.txt
-      - python libs_builder.py
-      - ls /usr/lib/x86_64-linux-gnu
-      - cp /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4000.14 pango-1.0
-      - cp /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4000.14 pangocairo-1.0
-      - cp /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14 .
-      - cp /usr/lib/x86_64-linux-gnu/libthai.so.0 .
-      - cp /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0 .
-      - cp /usr/lib/x86_64-linux-gnu/libdatrie.so.1 .
-      - ls
       - ls -a layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
       - npm install -g serverless
       - serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
