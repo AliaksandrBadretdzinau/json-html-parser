@@ -6,8 +6,8 @@ def lambda_function(event, context):
     data = {
         "data": {
             "layout_name": "base",
-            "title": "Title",
-            "text": "Some text",
+            "title": "Social networks!",
+            "text": "This is place where you can be close with your friends.",
             "links": [
                 "https://vk.com",
                 "https://twitter.com",
