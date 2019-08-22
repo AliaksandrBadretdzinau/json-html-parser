@@ -17,7 +17,6 @@ def libs_standart():
     libs = (
         'pybars',
         'pymeta',
-        'fpdf',
         'selenium'
     )
 
@@ -26,4 +25,3 @@ def libs_standart():
 
 if __name__ == '__main__':
     libs_standart()
-    #pango()
