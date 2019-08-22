@@ -34,7 +34,7 @@ phases:
       - npm install --save-dev serverless-apigwy-binary
       - npm install -g serverless
       - serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
-      - serverless remove && serverless deploy --aws-profile default
+      - serverless deploy --aws-profile default
   #pre_build:
     #commands:
       # - command
