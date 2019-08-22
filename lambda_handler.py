@@ -1,5 +1,6 @@
 import JsonPdfEngineLayer as json_pdf_engine
 from json import dumps
+import base64
 
 
 def lambda_function(event, context):
@@ -12,9 +13,14 @@ def lambda_function(event, context):
         "input": event
     }
 
+    with open('/tmp/test.pdf', 'rb') as f:
+        output = f.read()
+
     response = {
         "statusCode": 200,
-        "body": dumps(html)
+        "headers": { 'Content-Type': 'application/pdf' },
+        "body": base64.b64encode(output),
+        "isBase64Encoded": True,
     }
 
     return response
