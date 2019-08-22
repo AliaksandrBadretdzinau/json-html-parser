@@ -17,12 +17,6 @@ service: json-pdf-engine
 
 plugins:
   - serverless-apigw-binary
-  - serverless-apigwy-binary
-
-custom:
-  apigwBinary:
-    types:
-      - 'application/pdf'
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -128,3 +122,8 @@ functions:
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
+
+custom:
+  apigwBinary:
+    types:
+      - '*/*'
