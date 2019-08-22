@@ -1,6 +1,5 @@
 import shutil as sh
 import os
-import sys
 
 
 def copy_libs(src, dest, libs):
@@ -22,26 +21,6 @@ def libs_standart():
     )
 
     copy_libs(src, dest, libs)
-
-
-def pango():
-    src = '/usr/lib64'
-    dest = sys.argv[0]
-
-    libs = (
-        'libpango-1.0.so.0',
-        'libpango-1.0.so.0.4000.14',
-        'libpangocairo-1.0.so.0',
-        'libpangocairo-1.0.so.0.4000.14',
-        'libpangoft2-1.0.so.0',
-        'libpangoft2-1.0.so.0.4000.14'
-    )
-
-    print(dest)
-    sh.copy('/usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4000.14', os.path.join(dest, 'pango-1.0'))
-    sh.copy('/usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4000.14', os.path.join(dest, 'pangocairo-1.0'))
-    sh.copy('/usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14', dest)
-    #copy_libs(src, dest, libs)
 
 
 if __name__ == '__main__':
