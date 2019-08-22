@@ -31,6 +31,9 @@ custom:
 provider:
   name: aws
   runtime: python3.7
+  apiGateway:
+    binaryMediaTypes:
+      - 'application/pdf'
 
 # you can overwrite defaults here
 #  stage: dev
