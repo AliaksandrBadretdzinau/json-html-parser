@@ -18,7 +18,7 @@ def lambda_function(event, context):
 
     response = {
         "statusCode": 200,
-        "headers": { 'Content-Type': 'application/pdf' },
+        "headers": { 'Content-Type': '*/*' },
         "body": base64.b64encode(output),
         "isBase64Encoded": True,
     }
