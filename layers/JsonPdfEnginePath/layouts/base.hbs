@@ -1,8 +1,16 @@
-<style>
-    h1 {color:green}
-</style>
-<h1>{{title}}</h1>
-<h2>{{text}}</h2>
-{{#links}}
-{{>link}}<br>
-{{/links}}
+<html>
+    <head>
+        <style type="text/css">
+        h1 {
+            color: red
+        }
+        </style>
+    </head>
+    <body>
+        <h1>{{title}}</h1>
+        <p>{{text}}</p>
+        {{#links}}
+        {{>link}}<br>
+        {{/links}}
+    </body>
+</html>
