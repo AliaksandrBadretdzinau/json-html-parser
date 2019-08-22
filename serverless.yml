@@ -31,9 +31,6 @@ custom:
 provider:
   name: aws
   runtime: python3.7
-  apiGateway:
-    binaryMediaTypes:
-      - 'application/pdf'
 
 # you can overwrite defaults here
 #  stage: dev
@@ -83,8 +80,9 @@ functions:
 #    Check the event documentation for details
     events:
       - http:
+          integration: lambda
           path: hello
-          method: post
+          method: get
           contentHandling: CONVERT_TO_BINARY
 #      - websocket: $connect
 #      - s3: ${env:BUCKET}
