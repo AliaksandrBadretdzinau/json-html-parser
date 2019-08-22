@@ -21,7 +21,7 @@ phases:
       - pip install -r requirements.txt
       - python libs_builder.py
       - pyppeteer-install
-      - rpm -ql pyppeteer
+      - ls /root/.local/share/pyppeteer/local-chromium/575458
       - ls -a layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
       - npm install --save-dev serverless-apigw-binary
       - npm install -g serverless
