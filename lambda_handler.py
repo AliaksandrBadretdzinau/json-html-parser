@@ -1,27 +1,31 @@
 import JsonPdfEngineLayer as json_pdf_engine
-from json import dumps
 import base64
 
 
 def lambda_function(event, context):
-    template = json_pdf_engine.template_build(event['data']['layout_name'])
-    html = template(event['data'])
-    json_pdf_engine.pdf_build(html)
-
-    body = {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
-        "input": event
+    data = {
+        "data": {
+            "layout_name": "base",
+            "title": "Title",
+            "text": "Some text",
+            "links": [
+                "https://vk.com",
+                "https://twitter.com",
+                "https://facebook.com"
+            ]
+        }
     }
+    
+    template = json_pdf_engine.template_build(data['data']['layout_name'])
+    html = template(data['data'])
+    json_pdf_engine.pdf_build(html)
 
     with open('/tmp/test.pdf', 'rb') as f:
         output = f.read()
 
-    response = {
-        "statusCode": 200,
-        "headers": { 'Content-Type': '*/*' },
-        "body": base64.b64encode(output),
+    return {
         "isBase64Encoded": True,
-    }
-
-    return response
-
+        "statusCode": 200,
+        "headers": { "content-type": "application/pdf"},
+        "body":  base64.b64encode(output).decode("utf-8")
+}
