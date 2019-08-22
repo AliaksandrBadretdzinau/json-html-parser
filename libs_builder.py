@@ -18,6 +18,7 @@ def libs_standart():
         'pybars',
         'pymeta',
         'fpdf',
+        'selenium'
     )
 
     copy_libs(src, dest, libs)

@@ -17,8 +17,7 @@ phases:
        python: 3.7
       # name: version
     commands:
-      - yum install -y chromium
-      - rpm -ql chromium
+      - npm -g install phantomjs-prebuilt
       - pip install --upgrade pip
       - pip install -r requirements.txt
       - python libs_builder.py

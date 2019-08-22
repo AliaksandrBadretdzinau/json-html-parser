@@ -1,4 +1,4 @@
 pybars3==0.9.6
 PyMeta3==0.5.1
 fpdf
-pyppeteer
+selenium
