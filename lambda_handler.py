@@ -20,12 +20,12 @@ def lambda_function(event, context):
     html = template(data['data'])
     json_pdf_engine.pdf_build()
 
-    with open('/tmp/screen.png', 'rb') as f:
+    with open('/tmp/save_me.pdf', 'rb') as f:
         output = f.read()
 
     return {
         "isBase64Encoded": True,
         "statusCode": 200,
-        "headers": { "content-type": "image/png"},
+        "headers": { "content-type": "application/pdf"},
         "body":  base64.b64encode(output).decode("utf-8")
 }
