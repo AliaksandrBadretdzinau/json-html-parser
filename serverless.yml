@@ -74,10 +74,8 @@ functions:
 #    Check the event documentation for details
     events:
       - http:
-          integration: lambda
           path: hello
           method: get
-          contentHandling: CONVERT_TO_BINARY
 #      - websocket: $connect
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
