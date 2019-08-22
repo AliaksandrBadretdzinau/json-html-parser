@@ -17,12 +17,11 @@ phases:
        python: 3.7
       # name: version
     commands:
+      - yum install -y chromium
+      - rpm -ql chromium
       - pip install --upgrade pip
       - pip install -r requirements.txt
       - python libs_builder.py
-      - pyppeteer-install
-      - ls /root/.local/share/pyppeteer/local-chromium/575458
-      - cp -r /root/.local/share/pyppeteer/local-chromium/575458/chrome-linux layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
       - ls -a layers/JsonPdfEnginePath/python/lib/python3.7/site-packages
       - npm install --save-dev serverless-apigw-binary
       - npm install -g serverless
