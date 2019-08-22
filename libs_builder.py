@@ -18,17 +18,7 @@ def libs_standart():
     libs = (
         'pybars',
         'pymeta',
-        'weasyprint',
-        'cssselect2',
-        'webencodings',
-        'tinycss2',
-        'html5lib',
-        'cairocffi',
-        'cffi',
-        '_cffi_backend.cpython-37m-x86_64-linux-gnu.so',
-        '.libs_cffi_backend',
-        'pyphen',
-        'pycparser',
+        'fpdf'
     )
 
     copy_libs(src, dest, libs)
