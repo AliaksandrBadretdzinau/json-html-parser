@@ -71,8 +71,8 @@ functions:
 #    Check the event documentation for details
     events:
       - http:
-          path: hello
-          method: get
+          path: get-pdf
+          method: post
 #      - websocket: $connect
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
