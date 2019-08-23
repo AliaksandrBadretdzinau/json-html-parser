@@ -25,7 +25,7 @@ def lambda_function(event, context):
     print('ENCODED_BODY:', encoded_body)
 
     body_get = json.loads(encoded_body.decode())
-    print('UTF_BODY:', utf_body)
+    print('UTF_BODY:', body_get)
 
     template = json_pdf_engine.template_build(body_get['data']['layout_name'])
     html = template(body_get['data'])
