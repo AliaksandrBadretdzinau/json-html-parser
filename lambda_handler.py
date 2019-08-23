@@ -10,7 +10,7 @@ def lambda_function(event, context):
     )
 
     template = json_pdf_engine.template_build(data['data']['layout_name'])
-    html = template(body['data'])
+    html = template(data['data'])
     json_pdf_engine.pdf_build(html)
 
     with open('/tmp/output.pdf', 'rb') as f:
