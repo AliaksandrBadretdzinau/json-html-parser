@@ -17,7 +17,7 @@ def lambda_function(event, context):
             ]
         }
     }
-    post_data = base64.b64decode(event['body'])
+    post_data = base64.b64decode(event['body']).decode('utf-8')
     template = json_pdf_engine.template_build(post_data['data']['layout_name'])
     html = template(post_data['data'])
     json_pdf_engine.pdf_build(html)
