@@ -16,22 +16,17 @@ def lambda_function(event, context):
             ]
         }
     }
-    #post_data = event['Records'][0]['request']['body']
-    #template = json_pdf_engine.template_build(post_data['data']['layout_name'])
-    #html = template(post_data['data'])
-    #json_pdf_engine.pdf_build(html)
+    post_data = event['object']['body']['data']
+    template = json_pdf_engine.template_build(post_data['layout_name'])
+    html = template(post_data)
+    json_pdf_engine.pdf_build(html)
 
-    #with open('/tmp/save_me.pdf', 'rb') as f:
-    #    output = f.read()
-
-    #return {
-    #    "isBase64Encoded": True,
-    #    "statusCode": 200,
-    #    "headers": { "content-type": "application/pdf"},
-    #    "body":  base64.b64encode(output).decode("utf-8")
-    #}
+    with open('/tmp/save_me.pdf', 'rb') as f:
+        output = f.read()
 
     return {
+        "isBase64Encoded": True,
         "statusCode": 200,
-        "body": json.dumps(event)
+        "headers": { "content-type": "application/pdf"},
+        "body":  base64.b64encode(output).decode("utf-8")
     }
