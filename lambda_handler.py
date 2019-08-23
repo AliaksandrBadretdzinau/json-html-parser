@@ -4,6 +4,7 @@ import json
 
 
 def lambda_function(event, context):
+    print('Source event')
     print(event)
     data = {
         "data": {
@@ -17,7 +18,9 @@ def lambda_function(event, context):
             ]
         }
     }
-    post_data = base64.b64decode(event['body']).encode('utf-8')
+    post_data = base64.b64decode(event['body'])
+    print('Decoded event')
+    print(post_data)
     template = json_pdf_engine.template_build(post_data['data']['layout_name'])
     html = template(post_data['data'])
     json_pdf_engine.pdf_build(html)
