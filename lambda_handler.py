@@ -1,4 +1,4 @@
-import JsonPdfEngineLayer as json_pdf_engine
+import JsonPdfEngineLayer as layer
 
 import base64
 import json
@@ -9,9 +9,9 @@ def lambda_function(event, context):
         base64.b64decode(event['body']).decode()
     )
 
-    template = json_pdf_engine.template_build(data['data']['layout_name'])
+    template = layer.template_build(data['data']['layout_name'])
     html = template(data['data'])
-    json_pdf_engine.pdf_build(html)
+    layer.pdf_build(html)
 
     with open('/tmp/output.pdf', 'rb') as f:
         output = f.read()
