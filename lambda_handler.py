@@ -1,6 +1,5 @@
 import JsonPdfEngineLayer as json_pdf_engine
 import base64
-import json
 
 
 def lambda_function(event, context):
@@ -29,9 +28,9 @@ def lambda_function(event, context):
     #    "statusCode": 200,
     #    "headers": { "content-type": "application/pdf"},
     #    "body":  base64.b64encode(output).decode("utf-8")
+    #}
 
     return {
         "statusCode": 200,
-        "body": json.dumps(html)
+        "body": html
     }
-}
