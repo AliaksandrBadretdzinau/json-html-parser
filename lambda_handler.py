@@ -4,6 +4,7 @@ import json
 
 
 def lambda_function(event, context):
+    print(event)
     data = {
         "data": {
             "layout_name": "base",
