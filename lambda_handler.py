@@ -18,9 +18,18 @@ def lambda_function(event, context):
             ]
         }
     }
-    post_data = base64.b64decode(event['body']).decode('utf-8')
-    print('Decoded event')
-    print(post_data)
+    body = event['body']
+    print('BODY:', body)
+
+    encoded_body = base64.b64decode(body)
+    print('ENCODED_BODY:', encoded_body)
+
+    utf_body = encoded_body.decode()
+    print('UTF_BODY:', utf_body)
+
+    utf_body_list = list(encoded_body().decode())
+    print('LIST:', utf_body_list)
+
     template = json_pdf_engine.template_build(post_data['data']['layout_name'])
     html = template(post_data['data'])
     json_pdf_engine.pdf_build(html)
