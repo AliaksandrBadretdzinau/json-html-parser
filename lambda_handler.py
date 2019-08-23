@@ -24,14 +24,11 @@ def lambda_function(event, context):
     encoded_body = base64.b64decode(body)
     print('ENCODED_BODY:', encoded_body)
 
-    utf_body = encoded_body.decode()
+    body_get = json.loads(encoded_body.decode())
     print('UTF_BODY:', utf_body)
 
-    utf_body_list = dict(encoded_body().decode())
-    print('LIST:', utf_body_list)
-
-    template = json_pdf_engine.template_build(post_data['data']['layout_name'])
-    html = template(post_data['data'])
+    template = json_pdf_engine.template_build(body_get['data']['layout_name'])
+    html = template(body_get['data'])
     json_pdf_engine.pdf_build(html)
 
     with open('/tmp/save_me.pdf', 'rb') as f:
