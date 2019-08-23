@@ -16,8 +16,8 @@ def lambda_function(event, context):
         }
     }
     
-    template = json_pdf_engine.template_build(event['body']['data']['layout_name'])
-    html = template(event['body']['data'])
+    template = json_pdf_engine.template_build(data['data']['layout_name'])
+    html = template(data['data'])
     json_pdf_engine.pdf_build(html)
 
     with open('/tmp/save_me.pdf', 'rb') as f:
