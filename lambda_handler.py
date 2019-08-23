@@ -1,5 +1,6 @@
 import JsonPdfEngineLayer as json_pdf_engine
 import base64
+import json
 
 
 def lambda_function(event, context):
@@ -15,17 +16,22 @@ def lambda_function(event, context):
             ]
         }
     }
-    post_data = event['Records'][0]['request']['body']
-    template = json_pdf_engine.template_build(post_data['data']['layout_name'])
-    html = template(post_data['data'])
-    json_pdf_engine.pdf_build(html)
+    #post_data = event['Records'][0]['request']['body']
+    #template = json_pdf_engine.template_build(post_data['data']['layout_name'])
+    #html = template(post_data['data'])
+    #json_pdf_engine.pdf_build(html)
 
-    with open('/tmp/save_me.pdf', 'rb') as f:
-        output = f.read()
+    #with open('/tmp/save_me.pdf', 'rb') as f:
+    #    output = f.read()
+
+    #return {
+    #    "isBase64Encoded": True,
+    #    "statusCode": 200,
+    #    "headers": { "content-type": "application/pdf"},
+    #    "body":  base64.b64encode(output).decode("utf-8")
+    #}
 
     return {
-        "isBase64Encoded": True,
         "statusCode": 200,
-        "headers": { "content-type": "application/pdf"},
-        "body":  base64.b64encode(output).decode("utf-8")
+        "body": json.dumps(event)
     }
